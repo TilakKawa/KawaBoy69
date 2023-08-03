@@ -1,0 +1,241 @@
+<!--Name:- Tilak Rajeshkumar Kawa
+    Student ID:- 164542219
+    E-mail:- tkawa@myseneca.ca
+    Course:- WEB 222 NGG
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=”stylesheet” href=”https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css”rel=”nofollow” integrity=”sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I” crossorigin=”anonymous”>
+    <link rel="stylesheet" href="stylesheet1.css">
+    <link rel="stylesheet" href="education.css">
+    <link rel="stylesheet" href="navigationbar.css">
+    <link rel="stylesheet" href="forms.css">
+    <link rel="icon" href="https://w7.pngwing.com/pngs/24/27/png-transparent-white-and-black-tk-logo-illustration-tk-computer-icons-remix-domain-name-top-level-domain-k-miscellaneous-text-trademark.png" type="icon/image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <title>About Me..!</title>
+</head>
+<body style="background-color:rgb(217, 235, 235) ;">
+    <header class="navbar">
+        <div class="user">
+          <h2></h2>
+        </div>
+        <nav class="navItem">
+          <ul>
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#educationBackground">Education</a>
+            </li>
+            <li>
+                <a href="#forms">Contact</a>
+            </li>
+          </ul>
+        </nav>
+    </header>
+    <div class="container bg-img">
+        <img class="img-responsive" src="WhatsApp Image 2022-12-06 at 10.52.55 PM.jpeg" height="500px" width="450px">
+    </div>
+
+    <div class="text">
+    <p class="name">Tilak Kawa</p1>
+    <p>(Student, Software Developer)</p>
+    </div>
+    <!--I am running this on localhost platform that is why download attrinute is not working. It instead opens href without download..!-->
+    <center><a href="resume/Tilak_resume.pdf" class="button123 button_resume" download="resume">My Resume</a>
+    <a href="#about" class="button123 button_contact">About ME..!</a></center>
+
+    <div id="about" class="aboutMeDiv">
+        <h3 class="title">About Me and Acedemic Honesty</h3>
+        <hr class="hr" />
+        <div class="aboutMeContent">
+          <div class="aboutMeTable">
+              <table class="styled-table">
+                  <tbody>
+                      <tr>
+                          <td><b>AGE:</td>
+                          <td class="aboutDetails">19</td>
+                      </tr>
+
+                      <tr class="active-row">
+                          <td><b>EMAIL:</td>
+                          <td class="aboutDetails">tkawa@myseneca.ca</td>
+                      </tr>
+                      
+                      <tr class="active-row">
+                          <td><b>LANGUAGES:</td>
+                          <td class="aboutDetails">English, French, Hindi, Gujarati</td>
+                      </tr>
+
+                      <tr class="active-row">
+                          <td><b>CLASS SECTION:</td>
+                          <td class="aboutDetails">NGG</td>
+                      </tr>
+
+                      <tr class="active-row">
+                          <td><b>STUDENT ID:</td>
+                          <td class="aboutDetails">164542219</td>
+                      </tr>
+
+                      <tr class="active-row">
+                          <td><b>Hobbies:</td>
+                          <td class="aboutDetails">Listening to songs, learning new languages and little bit of Coding..!</td>
+                      </tr>
+
+                      <tr class="active-row">
+                          <td><b>INSTRUCTOR:</td>
+                          <td class="aboutDetails">Harry Scanlan</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+          <div class="aboutMeText">
+            I Declare That My Assessment Is Wholly My Own Work In Accordance With Seneca Academic Policy. No Part Of This Assessment Has Been Copied Electronically From Any Other Source (Including Web Sites) Except For The Information Supplied By The WEB222 Instructors And / Or Made Available In This Assessment For My Use. I Also Declare That No Part Of This Assignment Has Been Distributed To Other Students.
+            <br>
+            <h4><b>DATE:</b> December 12th, 2022</h4>
+            <br>
+            Hey there! I'm Tilak Kawa, and I'm presently pursuing diploma in computer programming at Seneca College. My father bought me a computer when I was 15 years old, which sparked my interest in computers. As time went on, my interest in computer science grew steadily. I gained knowledge of a variety of programming languages, including Javascript, Python, Java, C, and C++. 
+          </div>
+        </div>
+      </div>
+    
+
+      <div id="educationBackground" class="education-container">
+        <h2 class="title">Education</h2>
+        <hr class="hr" />
+        <tr class="content">
+            <ul>
+                <li>Saraswati Vidhyalaya:- </li><br>
+                <td>In the year 2021, I completed my high school certificate from this. As a mathematics major student main focus were on physics, chemistry, mathematics and computer programming. From there onwards I started and developed my interest in programming and further pursued this stream.</td><br><br><br>
+                <li>Seneca College, CA</li><br>
+                <td>After complition of my high school, I chose to study abroad and decided to take my admissions here. At Seneca, I decided to go with my interests that were developed for computyer programming. Therefore, I chose CPP {computer Programming) programe to pursue my career in this field. I will hopefully graduated by sept, 2023 from this college with a highly qualified diploma certificate and I do want to pursue further degree in this area of field.</td>
+            </ul>
+        </tr>
+      </div>
+
+      
+<!--Contact ME form:- 
+    This area topic was quite hard for me so I learned and understand it from google, w3school website, stack overflow, javatpoint-->
+
+      <div id="forms" class="contact-container">
+        <h3 class="title">Contact Me</h3>
+        <hr class="hr" />
+        <form id="form" class="form-container" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="*Your Name..*"
+                name="personName"
+                class="textbox"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="*Enter email Address.. *"
+                name="personEmail"
+                class="textbox"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="number">Contact Number:</label>
+              <input
+                type="text"
+                id="number"
+                placeholder="*Enter Mobile number.. [+1(***)(***)-****] "
+                name="personContactNumber"
+                class="textbox"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="address">Address:</label>
+                <textarea
+                id="address"
+                rows="6"
+                placeholder="Enter your address"
+                name="personAddress" required
+                class="textarea"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="city">City:</label>
+              <input
+                type="text"
+                id="city"
+                list="cities"
+                placeholder="*Enter your city"
+                name="personCity"
+                class="textbox"
+                required
+              />
+              <datalist id="cities">
+                <option value="Toronto">
+                <option value="Montreal">
+                <option value="Calgary">
+                <option value="Ottawa">
+                <option value="Vancouver">
+                <option value="North-york">
+              </datalist>
+            </div>
+            <div class="form-group">
+              <label for="code">Postal Code:</label>
+              <input
+                type="text"
+                id="code"
+                placeholder="*Enter your postal code"
+                name="personPostalCode"
+                class="textbox"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="question"><input type="radio" id="question" name="inquiryType"
+                      value="Question" onchange="handleInquiryTypeChange(value)" required> Question</label>
+              <label for="hiring"><input type="radio" id="hiring" name="inquiryType" value="Hiring" onchange="handleInquiryTypeChange(value)">
+                  Hiring</label>
+              <label for="comment"><input type="radio" id="comment" name="inquiryType" value="Comment" onchange="handleInquiryTypeChange(value)">
+                  Comment</label>
+            </div>
+            <div class="form-group hourlyRate">
+              <label for="rate">Hourly Rate:</label>
+              <input
+                type="number"
+                id="rate"
+                placeholder="*Enter hourly rate"
+                name="hourlyRate"
+                class="textbox"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+                <textarea
+                id="message"
+                rows="6"
+                placeholder="Enter your message"
+                name="personMessage" required
+                class="textarea"></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="submitBtn">Submit<i class="fas fa-paper-plane"></i></button>
+            </div>  
+        </form>
+      </div>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="javascript.js"></script>
+
+      
+      <a href="index.html"><button class="button123 button_resume">Back</a></button>
+</body>
+</html>
