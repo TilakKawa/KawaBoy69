@@ -1,0 +1,138 @@
+<!--
+    Name:- Tilak Rajeshkumar Kawa
+    Student ID:- 164542219
+    E-mail:- tkawa@myseneca.ca
+    Course:- WEB 222 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Fun Activity..</title>
+    <link rel="icon" href="https://cdn2.vectorstock.com/i/1000x1000/03/11/bored-teenager-icon-vector-31080311.jpg" type="image/x-icon">
+    <!--Added a logo in the Title-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+        *,*::before,*::after{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body{
+            background-image:url("background.jpg");
+        }
+        #container{
+            font-style: italic;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(1, 1, 14);
+            flex-direction: column;
+            min-width: 750px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 35px,15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255,255,255,0.2);
+            cursor: pointer;
+        }
+        #container > * {
+            color: white;
+            font-family: sans-serif;
+            font-size: 1.45rem;
+        }
+        .playfair{
+            font-family: 'playfair',sans-serif;
+        }
+        .montserrat{
+            font-family: 'montserrat',sans-serif;
+            font-size: 1.25rem;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .animation{
+            animation: fade 1.75s linear infinite;
+        }
+        @keyframes fade{
+            25%{
+                opacity: 55%;
+            }
+            50%{
+                opacity: 75%;
+            }
+            75%{
+                opacity: 100%;
+            }
+        }
+        .invisible{
+            opacity: 0%;
+        }
+        .visible{
+            opacity: 100%;
+        }
+        #button{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(2.3);
+            padding: 15px 75px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-family: 'playfair',sans-serif;
+        }
+        h1{
+            text-align: center;
+            color: white;
+            font-family: 'montserrat',sans-serif;
+            padding-top: 65px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header" class="visible">Let's Have Some Fun</h1>
+
+    <div id="container" class="invisible">
+        <p id="activity">Activity</p>
+        <p id="type">Type</p>
+        <p id="participants">Participants</p>
+        <p id="accessibility">Accessibilty</p>
+    </div>
+
+    <button id="button">Get Activity</button>
+    <script>
+        function fetchActivity(){
+    container.classList.replace('invisible','visible')
+    header.classList.replace('visible','invisible')
+    button.style.top='75%'
+    button.style.transform='translate(-50%,-50%) scale(1.4)'
+    fetch('https://www.boredapi.com/api/activity')
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+        if(data.link){
+            activity.innerHTML = `<span class='playfair'>Activity: </span><a href= ${data.link}><span class='monsterrat bold animation'>${data.activity}</span>(Learn More)</a>`
+        }
+        else{
+            activity.innerHTML = `<span class='playfair'>Activity: </span><span class='monsterrat'>${data.activity}</span>`
+            type.innerHTML = `<span class='playfair'>Type: </span><span class='monsterrat'>${data.type}</span>`
+            participants.innerHTML = `<span class='playfair'>No. of Participants: </span><span class='monsterrat'>${data.participants}</span>`
+            accessibility.innerHTML = `<span class='playfair'>Accessibility: </span><span class='monsterrat'>${data.accessibility}</span>`
+        }
+    })
+}
+button.addEventListener('click',fetchActivity)
+    </script>
+</body>
+</html>
