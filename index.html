@@ -1,0 +1,106 @@
+<!--/**
+ * WEB222 - Assignment 05
+ *
+ * I declare that this assignment is my own work in accordance with
+ * Seneca Academic Policy. No part of this assignment has been
+ * copied manually or electronically from any other source
+ * (including web sites) or distributed to other students.
+ *
+ * Please update the following with your information:
+ *
+ *      Name:       Tilak Rajeshkumar Kawa
+ *      Student ID: 164542219
+ *      Date:       02/12/2022
+ */-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- Change this to your name-->
+  <meta name="author" content="Tilak Rajeshkumar Kawa" />
+
+  <title>Ravi Color Company</title>
+  <!-- Classless CSS Stylesheet - https://oxal.org/projects/sakura/ -->
+  <link rel="stylesheet" href="./sakura.css" type="text/css" />
+  <link rel="icon" href="./download.jpg" type="image/icon type">
+  <!--Added a Icon Logo which was made by me. When i was handling my business back in INDIA-->
+  <style>
+    body {
+      background-color: rgb(173, 216, 230);
+    }
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.6s;
+      width: 40%;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .container {
+      padding: 3px 15px;
+    }
+
+
+/* Float four columns side by side */
+.column {
+  float:left;
+  width: 30%;
+  padding: 0 15px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 10px 10px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display:inline-block;
+  clear:left;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 500px) {
+  .column {
+    width:100%;
+    display:contents;
+    margin-bottom: 1px;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <!-- Change this to your Store's info -->
+    <h1>Ravi Color Company</h1>
+    <p>Not an ORINARY PAINT store...!</p>
+    <h2>Creating a New Vision through Colors...</h2>
+  </header>
+
+  <nav id="menu">
+  </nav>
+  <!-- Dynamically create your menu category buttons here -->
+  <hr />
+
+  <main>
+    <h2 id="selected-category" style="text-align: center; color: rgb(21, 87, 107)">
+      <!-- Dynamically update the selected category title -->
+    </h2>
+
+    <section class="display-items"></section>
+  </main>
+
+  <!-- JavaScript Data Files -->
+  <script src="./categories.js"></script>
+  <script src="./products.js"></script>
+
+  <!-- Main App JavaScript File -->
+  <script src="./app.js"></script>
+
+</body>
+
+</html>
